@@ -10,7 +10,7 @@ export default function FooterContainer({ isShow }) {
     const { todo } = useSelector((state) => state.reducerTodo);
     const dispatch = useDispatch();
 
-    const removeRodoLocalStorage = () => {
+    const removeTodoLocalStorage = () => {
         dispatch(allRemoveTodos());
         window.localStorage.removeItem('todo');
     };
@@ -19,5 +19,5 @@ export default function FooterContainer({ isShow }) {
         window.localStorage.setItem('todo', JSON.stringify(todo));
     };
     
-    return <Footer isShow={isShow} removeRodoLocalStorage={removeRodoLocalStorage} saveTodoLocalStorage={saveTodoLocalStorage}/>
+    return <Footer isShow={isShow} removeTodoLocalStorage={removeTodoLocalStorage} saveTodoLocalStorage={saveTodoLocalStorage}/>
 };
