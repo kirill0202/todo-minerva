@@ -5,10 +5,8 @@ import Synonym from '../../components/Synonym';
 
 import { createTodo } from '../../store/todo';
 
-export default function SynonymContainer() {
+export default function SynonymContainer({ isShow, handerShow, todoId, toggleShowSynonyms }) {
     const [value, setValue] = useState("");
-    const [isShow, setIsShow] = useState(true);
-    const [todoId, setTodoId] = useState();
     const [error, setError] = useState(null);
 
     const dispatch = useDispatch();
@@ -17,18 +15,9 @@ export default function SynonymContainer() {
         setValue(e.target.value)
     };
 
-    const handerShow = (idTodo) => {
-        setIsShow(false);
-        setTodoId(idTodo);
-    };
-
-    const toggleShowSynonyms = () => {
-        setIsShow(!isShow)
-    };
-
     const handlerCreateTodo = () => {
-        if(!value){
-           return setError({ message : "Поле не должно быть пустым!" });
+        if (!value) {
+            return setError({ message: "Поле не должно быть пустым!" });
         }
         const data = {
             title: value,
@@ -37,7 +26,7 @@ export default function SynonymContainer() {
         dispatch(createTodo(data));
         setValue("");
         setError(null);
-    }
+    };
 
     return <Synonym
         value={value}

@@ -4,11 +4,11 @@ import { useDispatch } from 'react-redux';
 import EditTodo from '../../components/EditTodo/index';
 import { editTodo } from '../../store/todo';
 
-export default function EditTodoContainer({ findTodo, todoId, toggleShowSynonyms }) {
+export default function EditTodoContainer({ findTodo, toggleShowSynonyms, todoId }) {
     const { title } = findTodo;
     const [value, setValue] = useState(title);
-    const dispatch = useDispatch();
     const [error, setError] = useState(null);
+    const dispatch = useDispatch();
 
     const handlerChangeInput = (e) => {
         setValue(e.target.value);

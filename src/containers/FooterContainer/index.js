@@ -6,18 +6,18 @@ import Footer from '../../components/Footer/index';
 
 import { allRemoveTodos } from '../../store/todo';
 
-export default function FooterContainer() {
+export default function FooterContainer({ isShow }) {
     const { todo } = useSelector((state) => state.reducerTodo);
     const dispatch = useDispatch();
 
-    const handlerRemoveTodos = () => {
+    const removeRodoLocalStorage = () => {
         dispatch(allRemoveTodos());
         window.localStorage.removeItem('todo');
     };
 
-    const handlerSaveAllTodos = () => {
+    const saveTodoLocalStorage = () => {
         window.localStorage.setItem('todo', JSON.stringify(todo));
     };
-
-    return <Footer handlerRemoveTodos={handlerRemoveTodos} handlerSaveAllTodos={handlerSaveAllTodos}/>
+    
+    return <Footer isShow={isShow} removeRodoLocalStorage={removeRodoLocalStorage} saveTodoLocalStorage={saveTodoLocalStorage}/>
 };

@@ -12,10 +12,14 @@ export default function TodoContainer({ handerShow, isShow, todoId, toggleShowSy
         dispatch(removeTodo(idTodo))
     };
 
-    useEffect(() => {
+    const getTodoLocalStorage = () => {
         const getTodo = window.localStorage.getItem('todo');
         const parseTodo = JSON.parse(getTodo);
         parseTodo && dispatch(setTodos(parseTodo))
+    };
+
+    useEffect(() => {
+        getTodoLocalStorage();
     }, []);
 
     return <Todo 

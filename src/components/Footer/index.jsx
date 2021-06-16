@@ -3,11 +3,11 @@ import Button from '../Button/index';
 
 import './styles.scss';
 
-export default function Footer({ handlerRemoveTodos, handlerSaveAllTodos }) {
+export default function Footer({ removeRodoLocalStorage, saveTodoLocalStorage, isShow }) {
     return (
-        <div className="footer">
-            <Button title="сохранить изменения" isSave={true} onClick={handlerSaveAllTodos}/>
-            <Button title="очистить синонимы" isCleare={true} onClick={handlerRemoveTodos}/>
-        </div>
+        <footer className="footer">
+            <Button title="сохранить изменения" disabled={!isShow} isSave={true} onClick={saveTodoLocalStorage}/>
+            <Button title="очистить синонимы" disabled={!isShow} isCleare={true} onClick={removeRodoLocalStorage}/>
+        </footer>
     )
-}
+};

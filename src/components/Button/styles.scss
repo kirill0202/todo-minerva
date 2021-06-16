@@ -15,6 +15,10 @@
         color: $colorButtonFocus;
         border: 2px solid $colorButtonFocus;
     }
+    &:disabled{
+        background: $colorRGBADefault;
+        opacity: 0.5;
+    }
     &-default {
         background: $colorDefultButton;
         color: $colorDefault;
@@ -23,9 +27,20 @@
         background: $colorButtonSave;
         width: 160px;
         margin-right: 20px;
+        &:focus{
+            background:  $colorDefault;
+            color: $colorButtonSave;
+            border: 2px solid $colorButtonSave;
+        }
     }
     &-cleare{
         background: $colorButtonCleare;
         width: 160px;
+        &:focus{
+            background:  $colorDefault;
+            color:$colorButtonCleare;
+            border: 2px solid $colorButtonCleare;
+        }
     }
+ 
 }

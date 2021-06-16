@@ -13,7 +13,7 @@ export default function Todo({ todo, handlerRemoveTodo, handerShow, toggleShowSy
                 <li className="todo__lists-item">
                     <div className="todo__lists-content">
                         {item.title}
-                        <div className="todo__lists-image">
+                        <div className="todo__lists-images">
                             <img 
                             onClick={() => handerShow(item.id)}
                             src={editIcon} 

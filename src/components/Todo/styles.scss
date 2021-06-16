@@ -14,6 +14,9 @@
         background: $colorDefault;
         margin-top: 5px;
         border-radius: 3px;
+        &:first-child{
+            margin-top: 0
+        }
     }
     &-content{
         @include flexSpaceBetween();
@@ -24,9 +27,9 @@
     &-edit{
         padding-right: 13px;
         opacity: 0.8;
-        @include OpacityContent()
+        @include OpacityContent();
     }
     &-remove {
-        @include OpacityContent()
+        @include OpacityContent();
     }
 };
