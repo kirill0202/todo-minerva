@@ -1,0 +1,15 @@
+@import "../../styles/mixins/index.scss";
+@import "../../styles/variable/index.scss";
+
+.notification{
+    display: flex;
+    align-items: baseline;
+    padding-top: 5px;
+    &-text{
+        @include FontFamilyNormal();
+        font-size: 14px;
+        line-height: 14px;
+        color: $colorErrorText;
+        padding-left: 5px;
+    }
+}

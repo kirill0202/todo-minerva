@@ -1,0 +1,31 @@
+@import '../../styles/mixins/index.scss';
+@import '../../styles/variable/index.scss';
+
+.button{
+    @include FontFamilyBold;
+    font-size: 14px;
+    line-height: 14px;
+    width: 82px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    &:focus{
+        background:  $colorDefault;
+        color: $colorButtonFocus;
+        border: 2px solid $colorButtonFocus;
+    }
+    &-default {
+        background: $colorDefultButton;
+        color: $colorDefault;
+    }
+    &-save{
+        background: $colorButtonSave;
+        width: 160px;
+        margin-right: 20px;
+    }
+    &-cleare{
+        background: $colorButtonCleare;
+        width: 160px;
+    }
+}

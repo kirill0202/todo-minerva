@@ -1,0 +1,32 @@
+@import '../../styles/variable/index.scss';
+@import '../../styles/mixins/index.scss';
+
+.todo__lists {
+    color: $colorLists;
+    margin-bottom: 15px;
+    height: 302px;
+    overflow-y: scroll;
+    &-item{
+        @include FontFamilyBold();
+        padding: 11px;
+        font-size: 16px;
+        line-height: 18px;
+        background: $colorDefault;
+        margin-top: 5px;
+        border-radius: 3px;
+    }
+    &-content{
+        @include flexSpaceBetween();
+    }
+    &-image{
+        cursor: pointer;
+    }
+    &-edit{
+        padding-right: 13px;
+        opacity: 0.8;
+        @include OpacityContent()
+    }
+    &-remove {
+        @include OpacityContent()
+    }
+};

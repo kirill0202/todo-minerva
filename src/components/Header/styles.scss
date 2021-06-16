@@ -1,0 +1,36 @@
+@import '../../styles/mixins/index.scss';
+@import '../../styles/variable/index.scss';
+
+.header{
+    &__top-content{
+        @include flexSpaceBetween();
+        border-bottom: 2px solid $borderBottonColor;
+        padding-bottom: 10px;
+    }
+    &__top-text{
+        @include FontFamilyBold();
+        font-size: 20px;
+        line-height: 28px;
+    }
+    &__main{
+        padding-top: 20px;
+        display: flex;
+    }
+    &__main-text{
+        @include FontFamilyBold();
+        color: $colorFontMain;
+        padding-right: 10px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+@media (max-width: 600px){
+    .header{
+       &__top-text{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 342px;
+       }
+    }
+};

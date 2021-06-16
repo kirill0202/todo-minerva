@@ -1,0 +1,22 @@
+@import './styles/variable/index.scss';
+
+@font-face {
+  font-family: 'CirceBold';
+  src: url('./fonts/Circe-Bold.ttf');
+}
+@font-face {
+  font-family: 'CirceNormal';
+  src: url('./fonts/Circe-Regular.ttf');
+};
+body {
+  background: $backgroundTodo;
+}
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

@@ -1,0 +1,20 @@
+@mixin flexSpaceBetween {
+    display: flex;
+    justify-content: space-between;
+}
+@mixin FontFamilyBold {
+    font-family: "CirceBold";
+    font-style: normal;
+    font-weight: bold;
+}
+@mixin FontFamilyNormal {
+    font-family: "CirceNormal";
+    font-style: normal;
+    font-weight: normal;
+}
+@mixin OpacityContent {
+    opacity: 0.8;
+        &:hover{
+            opacity: 1;
+        }
+}

@@ -1,0 +1,14 @@
+@import '../../styles/variable/index.scss';
+
+.content{
+    min-width: 560px;
+    min-height: 560px;
+    padding: 20px;
+    background: $backgroundMainContent;
+};
+
+@media (max-width: 600px){
+    .content{
+        min-width: 400px;
+    }
+};
