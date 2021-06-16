@@ -1,5 +1,6 @@
 import React from 'react';
 import EditTodoContainer from '../../containers/EditTodoContainer/index';
+import classNames from 'classnames';
 import { editIcon, removeIcon } from '../../static';
 
 import './styles.scss';
@@ -7,7 +8,7 @@ import './styles.scss';
 export default function Todo({ todo, handlerRemoveTodo, handerShow, toggleShowSynonyms, todoId, isShow }) {
     const findTodo = todo.find((item) => item.id === todoId);
 
-    return <ul className="todo__lists">
+    return <ul className={classNames("todo__lists", {"todo__lists-isShow": !isShow })}>
         {todo.map((item) => {
             return <React.Fragment key={item.id}>
                 <li className="todo__lists-item">

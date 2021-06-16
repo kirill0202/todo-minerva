@@ -8,14 +8,23 @@
   font-family: 'CirceNormal';
   src: url('./fonts/Circe-Regular.ttf');
 };
+
+html {
+  height: 100%;
+};
+
 body {
+  height: 100%;
   background: $backgroundTodo;
-}
+};
+
 *{
   margin: 0;
   padding: 0;
   list-style: none;
-}
+  box-sizing: border-box;
+};
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

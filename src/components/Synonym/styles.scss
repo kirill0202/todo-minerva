@@ -3,6 +3,7 @@
 
 .synonym{
     padding-top: 10px;
+    flex: 1;
     &__text {
         @include FontFamilyNormal();
         font-size: 14px;
